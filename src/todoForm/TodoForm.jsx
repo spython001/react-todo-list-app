@@ -8,11 +8,11 @@ export default function TodoForm() {
     <div className='todoForm'>
         <form>
             <input 
-              type="text" 
-              placeholder='add an activity...'
-              value={todoName}
-              onChange = {e => setTodoName(e.target.value)}
-              />
+            type="text" 
+            placeholder='add an activity...'
+            value={todoName}
+            onChange = {e => setTodoName(e.target.value)}
+            />
             <button>+</button>
         </form>
     </div>

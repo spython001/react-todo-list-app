@@ -1,0 +1,32 @@
+.todoForm{
+    
+    form {
+        display: flex;
+        border: 2px solid silver;
+        padding: 5px;
+        border-radius: 7px;
+
+            input{
+                background: none;
+                border: none;
+                outline: none;
+                display: block;
+                width: 100%;
+                padding: 0px 8px;
+                color: lightgray;
+                font-size: 1rem;
+
+                &::placeholder{
+                    font-size: 0.8rem;
+                }
+            }
+
+            button{
+                border: none;
+                background-color: lightgray;
+                border-radius: 6px;
+                cursor: pointer;
+                padding: 3px 5px;
+            }
+    }
+}
