@@ -27,6 +27,10 @@
                 border-radius: 6px;
                 cursor: pointer;
                 padding: 3px 5px;
+
+                &:hover{
+                    background-color: #fff;
+                }
             }
     }
 }

@@ -1,0 +1,19 @@
+.task{
+    border:2px solid silver;
+    background-color:#296868;
+    border-radius: 7px;
+    padding: 5px 9px;
+    margin-top: 5px;
+    
+    input{
+        cursor: pointer;
+        margin-right: 4px;
+    }
+   
+    span{
+        color: lightgray;
+        font-size: 1rem;
+        background-color: #296868;
+        
+    }
+}
