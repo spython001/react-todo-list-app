@@ -4,18 +4,16 @@ import Tasks from './tasks/Tasks'
 import TodoForm from './todoForm/TodoForm'
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const savedTodos = JSON.parse(localStorage.getItem('todos'));
+    return savedTodos ? savedTodos : [];
+  });;
 
-  //saving the tasks to loacl storage
+  //saving the tasks to local storage
   useEffect(() => {
-    if (todos.length === 0) return;
     localStorage.setItem('todos', JSON.stringify(todos));
    
   }, [todos]);
-  
-  useEffect(() => {
-    setTodos(JSON.parse(localStorage.getItem('todos')));
-  }, [])
   
 
   const addTodo = (name) => {
@@ -24,14 +22,26 @@ function App() {
     })
   }
 
+  const updateFinishedTodos= (todoIndex, newDone) => {
+    setTodos(prev =>{
+      const newTodos = [...prev];
+      newTodos[todoIndex].finish = newDone;
+      return newTodos;
+    });
+  }
+
  
   return (
     <div className='app'>
       <TodoForm onPut={addTodo}/>
       
       <div className='tsk'>
-        {todos.map(todo => (
-          <Tasks {...todo}/>
+      {todos.map((todo, index) => (
+          <Tasks 
+            {...todo} 
+            key={todo.name} 
+            onToggle={finish => updateFinishedTodos(index, finish)}
+          />
         ))}
       </div>
     </div>
