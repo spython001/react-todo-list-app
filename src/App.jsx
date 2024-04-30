@@ -1,10 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Tasks from './tasks/Tasks'
 import TodoForm from './todoForm/TodoForm'
 
 function App() {
   const [todos, setTodos] = useState([]);
+
+  //saving the tasks to loacl storage
+  useEffect(() => {
+    if (todos.length === 0) return;
+    localStorage.setItem('todos', JSON.stringify(todos));
+   
+  }, [todos]);
+  
+  useEffect(() => {
+    setTodos(JSON.parse(localStorage.getItem('todos')));
+  }, [])
+  
 
   const addTodo = (name) => {
     setTodos(prev => {
