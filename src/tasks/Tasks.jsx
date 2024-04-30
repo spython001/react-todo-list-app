@@ -1,11 +1,11 @@
 //import CheckBox from '../checkbox/CheckBox'
 import './tasks.scss'
 
-export default function Tasks() {
+export default function Tasks({name, finish}) {
   return (
     <div className='task'>
-        <input type="checkbox" />
-        <span>test task</span>
+        <input type="checkbox" onClick={finish}/>
+        <span>{name}</span>
     </div>
   )
 }
