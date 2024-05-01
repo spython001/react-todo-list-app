@@ -35,6 +35,9 @@
 
                 .plus{
                     background: lightgray;
+                    &:hover{
+                        background-color: #fff;
+                    }
                 }
             }
     }

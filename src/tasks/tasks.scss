@@ -13,22 +13,42 @@
         cursor: pointer;
         margin-right: 6px;
     }
-   
-    span{
-        color: #fff;
-        font-size: 1.15rem;
+
+    .taskName{
+        flex-grow: 1;
         background-color: #296868;
-        position: relative;
-       
-        &::before{
-            content: '';
-            display: block;
-            width: 0;
-            height: 1px;
-            background-color: #fff;
-            position: absolute;
-            top: 14.5px;
-            transition: width .1s linear;
+    }
+   
+        span{
+            color: #fff;
+            font-size: 1.15rem;
+            background-color: #296868;
+            position: relative;
+            
+            &::before{
+                content: '';
+                display: block;
+                width: 0;
+                height: 1px;
+                background-color: #fff;
+                position: absolute;
+                top: 14.5px;
+                transition: width .1s linear;
+            }
+        }
+    
+
+    .del{
+        background-color: #296868;
+        border: none;
+        cursor: pointer;
+
+        &:hover{
+            color: #fff;
+        }
+
+        .trash{
+            background-color: #296868;
         }
     }
 }

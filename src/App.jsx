@@ -43,7 +43,7 @@ function App() {
       return ' Good job, see you next time !'
     }
 
-    return 'Why stop here, when you can do finish it 😊'
+    return 'Why stop here, when you can finish it 😊'
   }
  
   return (
