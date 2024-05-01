@@ -30,11 +30,14 @@ function App() {
     });
   }
 
+  const todoProg = todos.filter(t => t.finish).length;
+  const totalTodos = todos.length
+
  
   return (
     <>
     <div className='app'>
-      <h1>0/10 Complete!</h1>
+      <h1>{todoProg}/{totalTodos} Complete!</h1>
       <TodoForm onPut={addTodo}/>
       
       <div className='tsk'>

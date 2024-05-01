@@ -20,7 +20,7 @@ export default function TodoForm({onPut}) {
             value={todoName}
             onChange = {e => setTodoName(e.target.value)}
             />
-            <button>+</button>
+            <button><i className="plus fa-solid fa-plus"></i></button>
         </form>
     </div>
   )
