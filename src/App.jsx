@@ -30,6 +30,13 @@ function App() {
     });
   }
 
+  //TO DELETE TASK
+  const removeTodos = (todoIndex) => {
+    setTodos(prev => {
+      return prev.filter((todoObj, index ) =>index !== todoIndex);
+    });
+  }
+
   const todoProg = todos.filter(t => t.finish).length;
   const totalTodos = todos.length
 
@@ -45,7 +52,7 @@ function App() {
 
     return 'Why stop here, when you can finish it 😊'
   }
- 
+
   return (
     <>
     <div className='app'>
@@ -60,6 +67,7 @@ function App() {
             {...todo} 
             key={todo.name} 
             onToggle={finish => updateFinishedTodos(index, finish)}
+            onDelete={() => removeTodos(index)}
           />
         ))}
       </div>

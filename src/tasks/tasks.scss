@@ -24,11 +24,23 @@
         background-color: #296868;
         display: flex;
         align-items: center;
+
+        .dash{
+            margin-left: 5px;
+        }
+
+        .date{
+            font-size: 0.8rem;
+            margin-left: 5px;
+            color: #fff;
+            font-weight: 300;
+            background-color: #296868;
+        }
     }
    
         span{
             color: #fff;
-            font-size: 1.15rem;
+            font-size: 1rem;
             background-color: #296868;
             position: relative;
             
@@ -39,7 +51,7 @@
                 height: 1px;
                 background-color: #fff;
                 position: absolute;
-                top: 14.5px;
+                top: 12.5px;
                 transition: width .1s linear;
             }
         }
