@@ -33,11 +33,25 @@ function App() {
   const todoProg = todos.filter(t => t.finish).length;
   const totalTodos = todos.length
 
+  const getMessage = () => {
+    const percent = todoProg/totalTodos * 100;
+
+    if (percent === 0) {
+      return `Let's get started 🔥🔥🔥`;
+    } 
+    if (percent ===100) {
+      return ' Good job, see you next time !'
+    }
+
+    return 'Why stop here, when you can do finish it 😊'
+  }
  
   return (
     <>
     <div className='app'>
       <h1>{todoProg}/{totalTodos} Complete!</h1>
+      <h2>{getMessage()}</h2>
+
       <TodoForm onPut={addTodo}/>
       
       <div className='tsk'>
