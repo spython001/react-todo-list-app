@@ -1,4 +1,3 @@
-//import CheckBox from '../checkbox/CheckBox'
 import './tasks.scss'
 
 export default function Tasks({name, finish, onToggle}) {

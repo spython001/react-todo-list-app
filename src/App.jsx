@@ -32,7 +32,9 @@ function App() {
 
  
   return (
+    <>
     <div className='app'>
+      <h1>0/10 Complete!</h1>
       <TodoForm onPut={addTodo}/>
       
       <div className='tsk'>
@@ -45,6 +47,7 @@ function App() {
         ))}
       </div>
     </div>
+    </>
   )
 }
 
